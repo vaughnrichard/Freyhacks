@@ -1,3 +1,9 @@
-body {
-    overflow: hidden;
+.container {
+    display: grid;
+    grid-template-columns: 15px 100px 100px 15px;
+}
+
+p {
+    margin: auto;
+    font-size: 15px;
 }

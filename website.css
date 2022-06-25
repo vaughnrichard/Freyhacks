@@ -1,7 +1,3 @@
-head {
-    background-color: white; /* placeholder */
-}
-
 body {
     background-color: rgb(32, 121, 150); /* placeholder */
   }
@@ -12,14 +8,16 @@ body {
   left: 0px;
   right: 0px;
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 30px 50fr;
 }
 
 .top_container {
   position: relative;
-  width: 100%;
-  height: 30px;
-  left: 50%;
+  margin: auto;
+  width: 30%;
+
+  display: grid;
+  grid-template-columns: 400px 150px;
 }
 
 ::placeholder {
@@ -28,28 +26,34 @@ body {
 }
 
 #search {
+  margin: auto;
   background: transparent;
   border: none;
   outline: none;
-  max-width: 300px;
   font-size: 30px;
+  width: 100%;
 }
 
 #search:focus {
   font-size: 30px;
-  max-width: 300px;
   color: rgb(24, 23, 23);
 
 }
 
+#listen {
+  width: 30%;
+  height: 100%;
+  border-radius: 50%;
+
+  position: relative;
+  left: 10%;
+}
 
 .csong {
-  position: relative;
-  left: 50%;
+  margin: auto;
 }
 
 .qsong {
-  position: relative;
-  left: 50%;
+  margin: auto;
   height: 50px;
 }

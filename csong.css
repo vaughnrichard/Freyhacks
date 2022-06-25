@@ -1,7 +1,12 @@
 .container {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr; /* must top align the text in here */
+    grid-template-columns: 15px 100px 100px 15px; /* must top align the text in here */
   }
+
+p {
+    font-size: 15px;
+    margin: auto;
+}
 
 .button1 {
     height: 10px;
@@ -12,6 +17,8 @@
 
     border: none;
     outline: none;
+
+    margin: auto;
 }
 
 .button1:hover {
@@ -34,6 +41,8 @@
 
     border: none;
     outline: none;
+
+    margin: auto;
 }
 
 .button2:hover {
