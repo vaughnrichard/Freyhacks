@@ -1,0 +1,48 @@
+.container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr; /* must top align the text in here */
+  }
+
+.button1 {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: gray; 
+    float: left;
+
+    border: none;
+    outline: none;
+}
+
+.button1:hover {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: white;
+    float: left;
+    /* Add shadow effect here and on b2hover */
+    border: none;
+    outline: none;
+}
+
+.button2 {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: gray;  
+    float: right;
+
+    border: none;
+    outline: none;
+}
+
+.button2:hover {
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: white;
+    float: right;
+
+    border: none;
+    outline: none;
+}

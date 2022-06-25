@@ -7,16 +7,21 @@
 <body>
 
 <!-- Deal with visualizer background here, set background equal to js or something -->
+<!-- use canvas to draw the circle animation when the keyword is detected-->
 
-<!-- Bar at bottom to disply current song info, info should be placed over background -->
+<div class="top_container" width=100%>
+    
+        <input type="text" id="search" name="search" placeholder="Pick your summertime mood" /> <!--could add randomized song titles / moods in here for placeholder-->
+        <script src="./handler.js"></script>
+    
+</div>
 
-    <iframe src="./csong.html" width="w1" height="h1" frameborder="0" scrolling="no" name="botbar">
-        <!-- Deal with implementing in here-->
-    </iframe>
+<div class="bot_container" width=100%>
+    <iframe src="./csong.html" width="w1" height=30px frameborder="0" scrolling="no" class="csong"></iframe>
 
-    <iframe src="./qsong.html" width="w1" height="h1" frameborder="0" scrolling="no" name="botbar">
-        <!-- Deal with implementing in here-->
-    </iframe>
+    <iframe src="./qsong.html" width="w1" height="h1" frameborder="0" scrolling="yes" class="qsong"></iframe>
+
+</div>
 
 </body>
 
