@@ -1,0 +1,4 @@
+freyhacks-database/freyhacks-database.sqlproj
+freyhacks-database/makedb.sql
+freyhacks-database/playedsongs.sql
+freyhacks-database/songqueue.sql

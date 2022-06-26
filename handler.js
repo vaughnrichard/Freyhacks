@@ -34,17 +34,25 @@ var listenHandler = function() {
 
     mediaRecorder.addEventListener("stop", () => {
       const blob = new Blob(data);
-      const url = URL.createObjectURL(blob);
+      const urlVal = URL.createObjectURL(blob);
 
       //handle transcription - make sure to console.log whatever the transcription is to check that its working
+      $.ajax({
+        type:"POST",
+        url: "./transcribe.py",
+        dataType: "text",
+        data: {param: urlVal},
+        success: searchFun
+      });
 
-      //pass to search fun - maybe return value, use this in search fun
     });
 
   });
 }
 
 var searchFun = function(text) {
+  console.log(text); // to ensure correct transmission
+
   const cohere = require('cohere-ai');
   cohere.init('{api_key}');
   (async () => {
@@ -60,6 +68,7 @@ var searchFun = function(text) {
 
     console.log(`Prediction: ${response.body.generations[0].text}`); // use while loop to go through all keywords, 
     //find songs corresponding to them and add them to queue; first song should be current song
+    // only have time to update current song html; should change dataset on the div and refresh page to allow for new js to run
   })();
 }
 

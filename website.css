@@ -9,27 +9,27 @@
 
 @keyframes visualizer{
   100%, 0%{
-    background-image: radial-gradient(circle at center, red, blue, green, rgb(122, 70, 244));
+    background-image: radial-gradient(circle at center, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(122, 122, 30), rgb(59, 100, 86));
   }
 
   25%{
-    background-image: radial-gradient(circle at center, orange, rgb(122, 34, 34), green, rgb(0, 0, 0));
+    background-image: radial-gradient(circle at center, transparent, rgb(0, 255, 0), rgb(0, 0, 255), rgb(122, 122, 240), rgb(59, 100, 86));
   }
 
   38%{
-    background-image: radial-gradient(circle at center, rgb(16, 35, 44), rgb(151, 49, 132), rgb(90, 17, 30), white);
+    background-image: radial-gradient(circle at center, rgb(255, 0, 0), transparent, rgb(0, 0, 255), rgb(37, 37, 101), rgb(62, 223, 170));
   }
 
   50%{
-    background-image: radial-gradient(circle at center, red, rgb(17, 65, 71), rgb(21, 97, 21), rgb(122, 34, 34), rgb(59, 100, 86));
+    background-image: radial-gradient(circle at center, rgb(255, 0, 0), rgb(0, 255, 0), transparent, rgb(48, 48, 60), rgb(62, 70, 223));
   }
 
   63%{
-    background-image: radial-gradient(circle at center, rgb(229, 233, 23), rgb(92, 67, 29), rgb(90, 17, 30));
+    background-image: radial-gradient(circle at center, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(201, 164, 44), rgb(62, 70, 223));
   }
 
   75%{
-    background-image: radial-gradient(circle at center, rgb(116, 38, 112), rgb(124, 124, 215), rgb(90, 17, 30));
+    background-image: radial-gradient(circle at center, rgb(255, 0, 0), rgb(0, 255, 0), rgb(0, 0, 255), rgb(201, 164, 44), rgb(223, 62, 89));
   }
 }
 
