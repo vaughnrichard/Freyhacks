@@ -1,23 +1,24 @@
 <!DOCTYPE html>
 <html>
-<head>
+<head id="background">
 <link rel="stylesheet" href="website.css">
 <title>Sounds of Summer</title>
 </head>
-<body>
+<body id="background">
 
 <!-- Deal with visualizer background here, set background equal to js or something -->
 <!-- use canvas to draw the circle animation when the keyword is detected-->
 
-<div class="top_container" width=100%>
+<div class="top_container">
     
-        <input type="text" id="search" name="search" placeholder="Pick your Summertime Mood" /> <!--could add randomized song titles / moods in here for placeholder-->
+        <input type="text" id="search" name="search" placeholder="Pick your Summertime Mood" > <!--could add randomized song titles / moods in here for placeholder-->
         <button type="button" id="listen" name="listen" >Listen</button>
+        <script src="./visualizer.js"></script>
         <script src="./handler.js"></script>
     
 </div>
 
-<div class="bot_container" width=100%>
+<div class="bot_container">
     <iframe src="./csong.html" width="w1" height=30px frameborder="0" scrolling="no" class="csong"></iframe>
 
     <iframe src="./qsong.html" width="w1" height="h1" frameborder="0" scrolling="yes" class="qsong"></iframe>

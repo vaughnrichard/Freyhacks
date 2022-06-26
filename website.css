@@ -1,6 +1,37 @@
-body {
-    background-color: rgb(32, 121, 150); /* placeholder */
+#background {
+    animation: visualizer 20s ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+    animation-fill-mode: both;
+    width: 100%;
+    height: 100%;
   }
+
+@keyframes visualizer{
+  100%, 0%{
+    background-image: radial-gradient(circle at center, red, blue, green, rgb(122, 70, 244));
+  }
+
+  25%{
+    background-image: radial-gradient(circle at center, orange, rgb(122, 34, 34), green, rgb(0, 0, 0));
+  }
+
+  38%{
+    background-image: radial-gradient(circle at center, rgb(16, 35, 44), rgb(151, 49, 132), rgb(90, 17, 30), white);
+  }
+
+  50%{
+    background-image: radial-gradient(circle at center, red, rgb(17, 65, 71), rgb(21, 97, 21), rgb(122, 34, 34), rgb(59, 100, 86));
+  }
+
+  63%{
+    background-image: radial-gradient(circle at center, rgb(229, 233, 23), rgb(92, 67, 29), rgb(90, 17, 30));
+  }
+
+  75%{
+    background-image: radial-gradient(circle at center, rgb(116, 38, 112), rgb(124, 124, 215), rgb(90, 17, 30));
+  }
+}
 
 .bot_container {
   position: absolute;
@@ -45,8 +76,8 @@ body {
   height: 100%;
   border-radius: 50%;
 
-  position: relative;
-  left: 10%;
+  border: none;
+  outline: none;
 }
 
 .csong {

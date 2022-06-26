@@ -1,6 +1,10 @@
 .container {
     display: grid;
-    grid-template-columns: 15px 100px 100px 15px;
+    grid-template-columns: 15px 100px 30px 100px 15px;
+}
+
+.inv {
+    color: transparent;
 }
 
 p {

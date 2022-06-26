@@ -65,6 +65,7 @@ var searchFun = function(text) {
 
 // loop this
 //while (1) {
+  //document.getElementById("body").style.backgroundColor = "white";
   document.getElementById('search').onkeyup = checkEnter;
   document.getElementById('listen').onclick = listenHandler;
 //}
