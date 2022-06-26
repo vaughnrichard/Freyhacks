@@ -1,6 +1,49 @@
-var pauseHandler = function() {
+var player;
+var mainFunc = function(vidId, song, songl, artist, artistl) { // vid id, song, songl, artist, artistl
+    // load first song, then while !player allow to play, else move next song to queue (like skipping), do cleaning <- this part should prob go outside of this
+    // update song, artist in current song menu; also make everything visible
+        document.getElementById("song").textContent = song;
+        document.getElementById("song").setAttribute('href', songl);
+        document.getElementById("song").style.color = "white";
+
+        document.getElementById("artist").textContent = artist;
+        document.getElementById("artist").setAttribute('href', artistl);
+        document.getElementById("artist").style.color = "white";
+
+        document.getElementById("pause").style.backgroundColor = "black";
+        document.getElementById("skip").style.backgroundColor = "gray";
+        document.getElementById("back").style.backgroundColor = "gray";
+    
+        var tag = document.createElement('script');
+        tag.src = "https://www.youtube.com/iframe_api";
+        var firstScriptTag = document.getElementsByTagName('script')[0];
+        firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+    
+        function onYouTubeIframeAPIReady() {
+            player = new YT.Player('yt-player', { //this player tag corresponds to the tag player in html
+              height: '0',
+              width: '0',
+              videoId: vidId,
+              events: {
+                  'onReady' : function(event) {
+                      event.target.playVideo();
+                  },
+                  'onStateChange': function(event) {
+                      if (event.data === YT.PlayerState.ENDED) {
+                          //player.playVideo(); // need to like exit or something
+                      }
+                  }
+              }
+            });
+        }
+        
+}
+
+var pauseHandler = function() { // need to fix player issue, shouldnt be too bad just combine into one function
     if (player.getPlayerState() === YT.PlayerState.PLAYING || player.getPlayerState() === YT.PlayerState.BUFFERING) {
         player.pauseVideo();
+    } else {
+        player.playVideo();
     }
 }
 
@@ -10,30 +53,13 @@ var skipHandler = function() {
     //adjust queue, or increase counter for grabbing from db
 }
 
-//var backHandler = function() {
-    //player.seekTo(seconds:0, allowSeekAhead:false);
-//}
-
-var playVideo = function (vidId) {
-    var player;
-      function onYouTubeIframeAPIReady() {
-        player = new YT.Player('player', {
-          height: '0',
-          width: '0',
-          videoId: vidId,
-          playerVars: {
-            'playsinline': 1
-          },
-          events: {
-            'onReady': onPlayerReady,
-            'onStateChange': onPlayerStateChange
-          }
-        });
-      }
+var backHandler = function() {
+    player.seekTo(0);
 }
 
-
       // if video ends or skip it pressed, moved onto next in queue
-document.getElementById('pause').onclick = pauseHandler;
-document.getElementById('skip').onclick = skipHandler;
-document.getElementById('back').onclick = backHandler;
+document.getElementById('pause').addEventListener("click", pauseHandler);
+document.getElementById('skip').addEventListener("click", skipHandler);
+document.getElementById('back').addEventListener("click", backHandler);
+
+mainFunc("F1B9Fk_SgI0", "Feels Like Summer", "Fhttps://www.youtube.com/watch?v=F1B9Fk_SgI0", "Childish Gambino", "https://www.youtube.com/channel/UC20LoHy2mX0LQODrkUalxVQ");

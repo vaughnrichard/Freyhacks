@@ -28,7 +28,7 @@ var listenHandler = function() {
     });
 
     document.getElementById('listen').onclick = function() {
-      mediaRecorder.stop();
+      //mediaRecorder.stop(); need to figure out how to stop
       listen.textContent="Listen";
     }
 
@@ -36,7 +36,7 @@ var listenHandler = function() {
       const blob = new Blob(data);
       const url = URL.createObjectURL(blob);
 
-      //handle transcription
+      //handle transcription - make sure to console.log whatever the transcription is to check that its working
 
       //pass to search fun - maybe return value, use this in search fun
     });
